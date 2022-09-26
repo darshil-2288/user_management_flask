@@ -1,0 +1,22 @@
+User Login
+---
+tags:
+  - Login User
+parameters:
+  - name: body
+    description: The body should contain the user Registration data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "email"
+        - "password"
+      properties:
+        email:
+          type: "email"
+          example: "crycetruly@gmail.com"
+        password:
+          type: "string"
+          format: password
+          example: "********"
