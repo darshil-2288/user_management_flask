@@ -64,8 +64,10 @@ def login():
     return jsonify({'error':'your creadential is not valid'})
 
 
-@auth.get('/<int:id>')
+
 @jwt_required()
+@auth.get('/<int:id>')
+@swag_from('./docs/auth/user_details.yaml')
 def get_user(id):
     user=User.query.filter_by(id=id).first()
     if not user:
@@ -77,11 +79,11 @@ def get_user(id):
     })    
 
 
-@auth.put('/update/<int:id>')
+
 @jwt_required()
+@swag_from('./docs/auth/updateuser.yaml')
+@auth.patch('/update/<int:id>')
 def update_user(id):
-    
-    
     user=User.query.get(id)
     username=request.json['username']
     email=request.json['email']
@@ -99,6 +101,7 @@ def update_user(id):
         }
     ) 
 
+@swag_from('./docs/auth/delete_user.yaml')
 @auth.delete('/delete/<int:id>')
 def delete_user(id):
     user=User.query.filter_by(id=id).first()
