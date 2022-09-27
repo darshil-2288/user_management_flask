@@ -1,0 +1,36 @@
+summary: "user details"
+description: ""
+produces:
+- "application/json"
+
+parameters:
+        - name: id
+          in: path
+          description: User ID
+          required: true         
+          schema: 
+            type: integer
+            format: int64
+    
+
+
+            
+      
+
+
+         
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "string"
+        message:
+          type: "string"
+
+  400:
+    description: "Same response is for 202, 400"
