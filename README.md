@@ -2,7 +2,7 @@
 description of project
       this project made in the flask python miniframework for the use of the user management system.i created all the apis for basic managemnet system and by the       use of these apis you can create user management system  with the help of any frontend technologies
       functionalities : registarion of user, login , update profile, delete profile, details of any user by there ID
-      i created swagger doc for this project beacuse swagger allow us to describe the structure of the project. this is the awesome use of of the swaggee i.e 
+      i created swagger doc for this project beacuse swagger allow us to describe the structure of the project. this is the awesome use of of the swagger that is
       structure apis. 
       you can find swagger doc for apis under the docs folder
 
